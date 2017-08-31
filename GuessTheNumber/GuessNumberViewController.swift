@@ -8,66 +8,96 @@
 
 import UIKit
 
-class GuessNumberViewController: UIViewController {
-    @IBOutlet var numberField:[UITextField]!
+class GuessNumberViewController: UIViewController{
+    @IBOutlet var numberField:[UILabel]!
+    @IBOutlet var buttonField:[UIButton]!
     @IBOutlet weak var guessView:UITextView!
     
     var currentTextfieldItem = 0
-    var answer = ""
+    var numCount = 0
+    var viewModel = GuessNumberViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
-        numberField[0].becomeFirstResponder()
-        for i in 0...4 {
-            numberField[i].delegate = self
-            numberField[i].tintColor = UIColor.clear
-            numberField[i].setBottomBorder(borderColor: UIColor.black)
+        for number in numberField {
+            number.setBottomBorder(borderColor: UIColor.black)
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-
-}
-
-extension GuessNumberViewController:UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let  char = string.cString(using: String.Encoding.utf8)!
-        let isBackSpace = strcmp(char, "\\b")
-        
-        if (isBackSpace == -92) {
-            print("Backspace was pressed")
-            if currentTextfieldItem >= 1 {
-                numberField[currentTextfieldItem].text = ""
-                currentTextfieldItem-=1
-                numberField[currentTextfieldItem].becomeFirstResponder()
+    
+    @IBAction func pressNum(_ sender:UIButton) {
+        if numCount > 4 {
+            if sender.tag == 10 {
+                numCount = 4
+                numberField[numCount].text = ""
             }
-            else {}
-            return true
+            else if sender.tag == 11 {
+                
+                // should run method check answer here
+            }
+            return
         }
-        else {
-        guard let text = textField.text else { return true }
-        let newLength = text.characters.count + string.characters.count - range.length
-        if newLength > 1 && currentTextfieldItem <= 3 {
-            currentTextfieldItem+=1
-            numberField[currentTextfieldItem].text = string
-            numberField[currentTextfieldItem].becomeFirstResponder()
-            return false
+        if numCount < 0 {
+            numCount = 0
         }
-        else if currentTextfieldItem == 4 {
-            return false
+        switch sender.tag {
+        case 0:
+            numberField[numCount].text = "\(sender.tag)"
+            numCount+=1
+            break
+        case 1:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 2:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 3:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 4:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 5:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 6:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 7:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 8:
+             numberField[numCount].text = "\(sender.tag)"
+             numCount+=1
+            break
+        case 9:
+            numberField[numCount].text = "\(sender.tag)"
+            numCount+=1
+            break
+        case 10: // press delete
+            if numberField[numCount].text == "" && numCount >= 1 {
+                numCount-=1
+            }
+            numberField[numCount].text = ""
+            break
+        case 11: // press answer
+        break
+        default:
+            break
         }
-        else {
-            return true
-        }
-        }
-    }
+       }
 }
+    
+
+
+
 
