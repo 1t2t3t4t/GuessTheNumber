@@ -58,6 +58,10 @@ extension UILabel {
 
 }
 
-func randomInt(num:Int) -> Int {
-    return Int(arc4random_uniform(UInt32(num))) + 1
+extension String {
+    
+    func toAttributedString(Color:UIColor) -> NSAttributedString {
+        return NSAttributedString(string: self, attributes: [NSForegroundColorAttributeName: Color])
+    }
+    
 }

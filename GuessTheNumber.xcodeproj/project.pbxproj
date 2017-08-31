@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B1D7FB1F5862B2006F01A7 /* NumberSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1D7FA1F5862B2006F01A7 /* NumberSet.swift */; };
+		81B1D7FE1F586E6A006F01A7 /* NumPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1D7FD1F586E6A006F01A7 /* NumPad.swift */; };
+		81B1D8001F586E76006F01A7 /* NumPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B1D7FF1F586E76006F01A7 /* NumPad.xib */; };
 		81E308931F51913A00EC39FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E308921F51913A00EC39FC /* AppDelegate.swift */; };
 		81E308951F51913A00EC39FC /* GuessNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E308941F51913A00EC39FC /* GuessNumberViewController.swift */; };
 		81E308981F51913A00EC39FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E308961F51913A00EC39FC /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81B1D7FA1F5862B2006F01A7 /* NumberSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberSet.swift; sourceTree = "<group>"; };
+		81B1D7FD1F586E6A006F01A7 /* NumPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumPad.swift; sourceTree = "<group>"; };
+		81B1D7FF1F586E76006F01A7 /* NumPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumPad.xib; sourceTree = "<group>"; };
 		81E3088F1F51913A00EC39FC /* GuessTheNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E308921F51913A00EC39FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GuessTheNumber/AppDelegate.swift; sourceTree = "<group>"; };
 		81E308941F51913A00EC39FC /* GuessNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +57,7 @@
 		81E308AE1F51913B00EC39FC /* GuessTheNumberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheNumberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E308B21F51913B00EC39FC /* GuessTheNumberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheNumberUITests.swift; sourceTree = "<group>"; };
 		81E308B41F51913B00EC39FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF096A621F57E63400E81DE8 /* GuessNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessNumberViewModel.swift; sourceTree = "<group>"; };
+		EF096A621F57E63400E81DE8 /* GuessNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuessNumberViewModel.swift; path = GuessTheNumber/GuessNumberViewModel.swift; sourceTree = "<group>"; };
 		EF0FCD831F519B1F001D9EAE /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EF6F905C1F540D7C009EC41B /* PressableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PressableButton.swift; sourceTree = "<group>"; };
 		EF6F905E1F540DF3009EC41B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -83,14 +89,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81B1D7F81F586287006F01A7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81E308941F51913A00EC39FC /* GuessNumberViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		81B1D7F91F5862A6006F01A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81B1D7FA1F5862B2006F01A7 /* NumberSet.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		81B1D7FC1F586DFA006F01A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81B1D7FD1F586E6A006F01A7 /* NumPad.swift */,
+				81B1D7FF1F586E76006F01A7 /* NumPad.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		81E308861F51913A00EC39FC = {
 			isa = PBXGroup;
 			children = (
 				81E308991F51913A00EC39FC /* Assets.xcassets */,
-				EF6F90601F554EAC009EC41B /* View */,
-				EF0FCD851F519B31001D9EAE /* StoryBoard */,
-				EF0FCD821F519B09001D9EAE /* Core */,
-				EFCBC2E51F5194EA003494B1 /* Fonts */,
 				81E308911F51913A00EC39FC /* GuessTheNumber */,
 				81E308A61F51913B00EC39FC /* GuessTheNumberTests */,
 				81E308B11F51913B00EC39FC /* GuessTheNumberUITests */,
@@ -111,8 +138,13 @@
 		81E308911F51913A00EC39FC /* GuessTheNumber */ = {
 			isa = PBXGroup;
 			children = (
-				81E308941F51913A00EC39FC /* GuessNumberViewController.swift */,
-				EF096A621F57E63400E81DE8 /* GuessNumberViewModel.swift */,
+				81B1D7FC1F586DFA006F01A7 /* View */,
+				81B1D7F91F5862A6006F01A7 /* Model */,
+				81B1D7F81F586287006F01A7 /* ViewController */,
+				EF6F90601F554EAC009EC41B /* ViewModel */,
+				EF0FCD821F519B09001D9EAE /* Core */,
+				EFCBC2E51F5194EA003494B1 /* Fonts */,
+				EF0FCD851F519B31001D9EAE /* StoryBoard */,
 			);
 			path = GuessTheNumber;
 			sourceTree = "<group>";
@@ -145,6 +177,7 @@
 				EF0FCD831F519B1F001D9EAE /* Extension.swift */,
 			);
 			name = Core;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EF0FCD851F519B31001D9EAE /* StoryBoard */ = {
@@ -154,13 +187,16 @@
 				81E3089B1F51913B00EC39FC /* LaunchScreen.storyboard */,
 			);
 			name = StoryBoard;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		EF6F90601F554EAC009EC41B /* View */ = {
+		EF6F90601F554EAC009EC41B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF096A621F57E63400E81DE8 /* GuessNumberViewModel.swift */,
 			);
-			name = View;
+			name = ViewModel;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EFCBC2E51F5194EA003494B1 /* Fonts */ = {
@@ -169,6 +205,7 @@
 				EFCBC2E61F5194F3003494B1 /* digital-7.ttf */,
 			);
 			name = Fonts;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B1D8001F586E76006F01A7 /* NumPad.xib in Resources */,
 				81E3089D1F51913B00EC39FC /* LaunchScreen.storyboard in Resources */,
 				81E3089A1F51913B00EC39FC /* Assets.xcassets in Resources */,
 				81E308981F51913A00EC39FC /* Main.storyboard in Resources */,
@@ -310,6 +348,8 @@
 				EF6F905F1F540DF3009EC41B /* Utils.swift in Sources */,
 				EF0FCD841F519B1F001D9EAE /* Extension.swift in Sources */,
 				EF6F905D1F540D7C009EC41B /* PressableButton.swift in Sources */,
+				81B1D7FB1F5862B2006F01A7 /* NumberSet.swift in Sources */,
+				81B1D7FE1F586E6A006F01A7 /* NumPad.swift in Sources */,
 				EF096A631F57E63400E81DE8 /* GuessNumberViewModel.swift in Sources */,
 				81E308951F51913A00EC39FC /* GuessNumberViewController.swift in Sources */,
 				81E308931F51913A00EC39FC /* AppDelegate.swift in Sources */,
