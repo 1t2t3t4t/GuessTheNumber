@@ -30,6 +30,9 @@ class GuessNumberViewController: UIViewController{
 extension GuessNumberViewController: NumPadDelegate {
     
     func numberPressed(_ numPad: NumPad, number: Int) {
+        if numCount == 4 && self.numberField[numCount].text != "" {
+            return
+        }
         self.numberField[numCount].text = "\(number)"
         numCount += numCount == 4 ? 0 : 1
     }
@@ -39,8 +42,11 @@ extension GuessNumberViewController: NumPadDelegate {
     }
     
     func deletePressed(_ numPad: NumPad) {
+        if self.numberField[numCount].text == ""{
+            numCount -= numCount == 0 ? 0 : 1
+        }
         self.numberField[numCount].text = ""
-        numCount -= numCount == 0 ? 0 : 1
+        //numCount -= numCount == 0 ? 0 : 1
     }
     
     func checkAnswer() {
