@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uUy-NA-XaX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -101,7 +103,281 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.80000000000001" y="141.67916041979012"/>
+            <point key="canvasLocation" x="1066" y="37"/>
+        </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="lPc-I8-cAu">
+            <objects>
+                <viewController storyboardIdentifier="MainMenuViewController" id="uUy-NA-XaX" customClass="MainMenuViewController" customModule="GuessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UQt-2g-ngh"/>
+                        <viewControllerLayoutGuide type="bottom" id="8UH-O4-II4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VNj-XN-UAj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TO BE REPLACED" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RUf-OP-ECF">
+                                <rect key="frame" x="30" y="65" width="316" height="100"/>
+                                <color key="backgroundColor" red="0.57265514139999996" green="0.71885484460000004" blue="0.59611034389999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="60"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BEST : 5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YGg-6b-oJx">
+                                <rect key="frame" x="275" y="68" width="65" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YGg-6b-oJx" secondAttribute="height" multiplier="44:13" id="0YW-kR-3SP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-fc-gC5">
+                                <rect key="frame" x="31.5" y="215" width="315" height="333.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8g-dV-RkP" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="147"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="PLAY NOW">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="playButtonClicked:" destination="uUy-NA-XaX" eventType="touchUpInside" id="xKY-eV-DD6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URS-P8-ALt" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="187" width="315" height="146.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="MORE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="moreButtonClicked:" destination="uUy-NA-XaX" eventType="touchUpInside" id="E5W-82-hRX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89019607840000003" green="0.86274509799999999" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="YGg-6b-oJx" secondAttribute="trailing" constant="19" id="6aO-3D-QHc"/>
+                            <constraint firstItem="YGg-6b-oJx" firstAttribute="top" secondItem="UQt-2g-ngh" secondAttribute="bottom" constant="48" id="EJc-1l-GP0"/>
+                            <constraint firstItem="Kie-fc-gC5" firstAttribute="top" secondItem="RUf-OP-ECF" secondAttribute="bottom" constant="49.670000000000002" id="FUS-8Y-Vqy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kie-fc-gC5" secondAttribute="trailing" constant="12.67" id="NuX-lh-M3T"/>
+                            <constraint firstItem="Kie-fc-gC5" firstAttribute="height" secondItem="VNj-XN-UAj" secondAttribute="height" multiplier="0.5" id="POi-pa-wCx"/>
+                            <constraint firstItem="RUf-OP-ECF" firstAttribute="top" secondItem="UQt-2g-ngh" secondAttribute="bottom" constant="45" id="Tm5-TN-jOJ"/>
+                            <constraint firstItem="RUf-OP-ECF" firstAttribute="leading" secondItem="VNj-XN-UAj" secondAttribute="leadingMargin" constant="14" id="eCH-4K-F7h"/>
+                            <constraint firstItem="Kie-fc-gC5" firstAttribute="width" secondItem="VNj-XN-UAj" secondAttribute="width" multiplier="0.84" id="hWj-Kl-prT"/>
+                            <constraint firstItem="RUf-OP-ECF" firstAttribute="height" secondItem="VNj-XN-UAj" secondAttribute="height" multiplier="0.15" id="p8k-i3-KoG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RUf-OP-ECF" secondAttribute="trailing" constant="13" id="xOV-zw-yey"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToGame" id="QRJ-Jg-Toa"/>
+                        <segue destination="fJy-Vh-jwo" kind="show" identifier="showMoreView" id="i49-1b-ORT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxT-Vu-z8I" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="isS-3V-gXu">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="fJy-Vh-jwo" customClass="MoreViewController" customModule="GuessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Ie-JU-OYB"/>
+                        <viewControllerLayoutGuide type="bottom" id="eun-PH-HBT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cqn-Pr-sDk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jph-EE-Smp">
+                                <rect key="frame" x="28" y="100" width="319" height="500.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11c-6g-5Ut" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="84"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Share This App">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L6-mT-1OK" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="104" width="319" height="84"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Rate Us">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3j-Ia-dXg" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="319" height="84"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Contact Us">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-rd-h7a" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="312" width="319" height="84"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Remove Ad">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cL9-1A-o8b" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="416" width="319" height="84.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <state key="normal" title="Restore Purchase">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JXe-rd-h7a" secondAttribute="trailing" id="F83-Lq-ioq"/>
+                                    <constraint firstItem="JXe-rd-h7a" firstAttribute="leading" secondItem="jph-EE-Smp" secondAttribute="leading" id="FpN-ig-NGE"/>
+                                    <constraint firstItem="cL9-1A-o8b" firstAttribute="leading" secondItem="jph-EE-Smp" secondAttribute="leading" id="GgY-ZI-C6E"/>
+                                    <constraint firstAttribute="bottom" secondItem="cL9-1A-o8b" secondAttribute="bottom" id="LMN-4g-0B1"/>
+                                    <constraint firstAttribute="trailing" secondItem="3L6-mT-1OK" secondAttribute="trailing" id="Lfk-Qh-mkJ"/>
+                                    <constraint firstItem="3L6-mT-1OK" firstAttribute="leading" secondItem="jph-EE-Smp" secondAttribute="leading" id="RvQ-wa-bf4"/>
+                                    <constraint firstAttribute="trailing" secondItem="f3j-Ia-dXg" secondAttribute="trailing" id="UZu-4A-cLs"/>
+                                    <constraint firstItem="f3j-Ia-dXg" firstAttribute="leading" secondItem="jph-EE-Smp" secondAttribute="leading" id="WzQ-gs-Hbi"/>
+                                    <constraint firstItem="11c-6g-5Ut" firstAttribute="top" secondItem="jph-EE-Smp" secondAttribute="top" id="ezJ-Cq-Vcn"/>
+                                    <constraint firstItem="11c-6g-5Ut" firstAttribute="leading" secondItem="jph-EE-Smp" secondAttribute="leading" id="oAt-w1-Owm"/>
+                                    <constraint firstAttribute="trailing" secondItem="cL9-1A-o8b" secondAttribute="trailing" id="wJS-Vh-3ju"/>
+                                    <constraint firstAttribute="trailing" secondItem="11c-6g-5Ut" secondAttribute="trailing" id="xlC-kg-ybe"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2j-y5-I4n">
+                                <rect key="frame" x="150.5" y="35" width="74" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="oor-Pq-86x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.2784313725" green="0.28627450980000002" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPO-v1-e42" customClass="PressableButton" customModule="GuessTheNumber" customModuleProvider="target">
+                                <rect key="frame" x="28" y="35" width="44" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="uTv-uB-AdO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="back:" destination="fJy-Vh-jwo" eventType="touchUpInside" id="6ei-EG-8kC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8862745098" green="0.86274509799999999" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NPO-v1-e42" firstAttribute="centerY" secondItem="l2j-y5-I4n" secondAttribute="centerY" id="DFD-d9-JaL"/>
+                            <constraint firstItem="jph-EE-Smp" firstAttribute="width" secondItem="cqn-Pr-sDk" secondAttribute="width" multiplier="0.85" id="QPT-NS-Il9"/>
+                            <constraint firstItem="jph-EE-Smp" firstAttribute="centerX" secondItem="cqn-Pr-sDk" secondAttribute="centerX" id="aKM-Rd-oFb"/>
+                            <constraint firstItem="NPO-v1-e42" firstAttribute="height" secondItem="l2j-y5-I4n" secondAttribute="height" id="cbX-Gu-e4w"/>
+                            <constraint firstItem="NPO-v1-e42" firstAttribute="leading" secondItem="cqn-Pr-sDk" secondAttribute="leadingMargin" constant="12" id="f4U-wc-KVR"/>
+                            <constraint firstItem="l2j-y5-I4n" firstAttribute="top" secondItem="0Ie-JU-OYB" secondAttribute="bottom" constant="15" id="hy9-FN-ue1"/>
+                            <constraint firstItem="jph-EE-Smp" firstAttribute="top" secondItem="l2j-y5-I4n" secondAttribute="bottom" constant="23" id="iKU-rk-KhC"/>
+                            <constraint firstItem="l2j-y5-I4n" firstAttribute="centerX" secondItem="cqn-Pr-sDk" secondAttribute="centerX" id="jsF-di-OT4"/>
+                            <constraint firstItem="jph-EE-Smp" firstAttribute="height" secondItem="cqn-Pr-sDk" secondAttribute="height" multiplier="0.75" id="lOe-00-U3r"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDO-7x-4Hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="821.73913043478262"/>
         </scene>
     </scenes>
 </document>

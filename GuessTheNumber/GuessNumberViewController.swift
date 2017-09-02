@@ -42,20 +42,18 @@ extension GuessNumberViewController: NumPadDelegate {
     }
     
     func deletePressed(_ numPad: NumPad) {
-        if self.numberField[numCount].text == ""{
+        
+        if self.numberField[numCount].text == "" {
             numCount -= numCount == 0 ? 0 : 1
         }
         self.numberField[numCount].text = ""
-        //numCount -= numCount == 0 ? 0 : 1
     }
     
     func checkAnswer() {
-        if self.numCount < 4 {
-            return
-        }
         var userAnswer:[Int] = []
         for field in numberField {
-            userAnswer.append(Int(field.text!)!)
+            guard let number = Int(field.text!) else { return  }
+            userAnswer.append(number)
         }
         for number in numberField {
             number.text = ""

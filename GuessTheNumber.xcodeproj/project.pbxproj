@@ -10,6 +10,9 @@
 		81B1D7FB1F5862B2006F01A7 /* NumberSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1D7FA1F5862B2006F01A7 /* NumberSet.swift */; };
 		81B1D7FE1F586E6A006F01A7 /* NumPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1D7FD1F586E6A006F01A7 /* NumPad.swift */; };
 		81B1D8001F586E76006F01A7 /* NumPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B1D7FF1F586E76006F01A7 /* NumPad.xib */; };
+		81B1D8021F5ABD54006F01A7 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1D8011F5ABD54006F01A7 /* MainMenuViewController.swift */; };
+		81B1D8041F5ABDAE006F01A7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1D8031F5ABDAE006F01A7 /* Constant.swift */; };
+		81B1D8061F5AC0C0006F01A7 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1D8051F5AC0BF006F01A7 /* MoreViewController.swift */; };
 		81E308931F51913A00EC39FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E308921F51913A00EC39FC /* AppDelegate.swift */; };
 		81E308951F51913A00EC39FC /* GuessNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E308941F51913A00EC39FC /* GuessNumberViewController.swift */; };
 		81E308981F51913A00EC39FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E308961F51913A00EC39FC /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		81B1D7FA1F5862B2006F01A7 /* NumberSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberSet.swift; sourceTree = "<group>"; };
 		81B1D7FD1F586E6A006F01A7 /* NumPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumPad.swift; sourceTree = "<group>"; };
 		81B1D7FF1F586E76006F01A7 /* NumPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumPad.xib; sourceTree = "<group>"; };
+		81B1D8011F5ABD54006F01A7 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		81B1D8031F5ABDAE006F01A7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		81B1D8051F5AC0BF006F01A7 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		81E3088F1F51913A00EC39FC /* GuessTheNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E308921F51913A00EC39FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GuessTheNumber/AppDelegate.swift; sourceTree = "<group>"; };
 		81E308941F51913A00EC39FC /* GuessNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				81E308941F51913A00EC39FC /* GuessNumberViewController.swift */,
+				81B1D8011F5ABD54006F01A7 /* MainMenuViewController.swift */,
+				81B1D8051F5AC0BF006F01A7 /* MoreViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 				81E3089E1F51913B00EC39FC /* Info.plist */,
 				81E308921F51913A00EC39FC /* AppDelegate.swift */,
 				EF0FCD831F519B1F001D9EAE /* Extension.swift */,
+				81B1D8031F5ABDAE006F01A7 /* Constant.swift */,
 			);
 			name = Core;
 			path = ..;
@@ -345,12 +354,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B1D8021F5ABD54006F01A7 /* MainMenuViewController.swift in Sources */,
 				EF6F905F1F540DF3009EC41B /* Utils.swift in Sources */,
 				EF0FCD841F519B1F001D9EAE /* Extension.swift in Sources */,
 				EF6F905D1F540D7C009EC41B /* PressableButton.swift in Sources */,
+				81B1D8061F5AC0C0006F01A7 /* MoreViewController.swift in Sources */,
 				81B1D7FB1F5862B2006F01A7 /* NumberSet.swift in Sources */,
 				81B1D7FE1F586E6A006F01A7 /* NumPad.swift in Sources */,
 				EF096A631F57E63400E81DE8 /* GuessNumberViewModel.swift in Sources */,
+				81B1D8041F5ABDAE006F01A7 /* Constant.swift in Sources */,
 				81E308951F51913A00EC39FC /* GuessNumberViewController.swift in Sources */,
 				81E308931F51913A00EC39FC /* AppDelegate.swift in Sources */,
 			);
